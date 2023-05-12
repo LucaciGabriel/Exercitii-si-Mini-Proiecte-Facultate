@@ -1,0 +1,4 @@
+Prima linie
+A doua linie
+A treia linie
+Sfarsit fisier

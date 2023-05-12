@@ -1,0 +1,10 @@
+Linia: 1
+doi 1
+trei 1
+unu 1
+Linia: 2
+unu 3
+Linia: 3
+doi 2
+Linia: 4
+trei 1
