@@ -1,0 +1,11 @@
+void setup()
+{
+DDRD=DDRD|B00001110;
+PORTD=PORTD|B00110000;
+Serial.begin(9600);
+}
+void loop()
+{
+byte var=PIND;
+Serial.println(var,BIN);
+}

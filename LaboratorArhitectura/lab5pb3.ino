@@ -1,0 +1,67 @@
+unsigned long durata;
+float distanta;
+void setup()
+{
+pinMode(2,OUTPUT);
+pinMode(3,INPUT);
+pinMode(4,OUTPUT);
+pinMode(5,OUTPUT);
+pinMode(6,OUTPUT);
+pinMode(7,OUTPUT);
+pinMode(8,OUTPUT);
+pinMode(9,OUTPUT);
+pinMode(10,OUTPUT);
+pinMode(11,OUTPUT);
+Serial.begin(9600);
+}
+void loop()
+{
+  digitalWrite(2,LOW);
+  delayMicroseconds(2);
+  digitalWrite(2,HIGH);
+  delayMicroseconds(10);
+  digitalWrite(2,LOW);
+  durata=pulseIn(3,HIGH);
+  distanta=(durata*0.000001*340*100)/2;
+  Serial.println(distanta);
+  if(distanta>5)
+  {
+    PORTD=B00010100;
+    PORTB=B00000000;
+  }
+  if(distanta>6)
+  {
+    PORTD=B00110100;
+    PORTB=B00000000;
+  }
+  if(distanta>7)
+  {
+    PORTD=B01110100;
+    PORTB=B00000000;
+  }
+  if(distanta>8)
+  {
+    PORTD=B11110100;
+    PORTB=B00000000;
+  }
+  if(distanta>9)
+  {
+    PORTD=B11110100;
+    PORTB=B00000001;
+  }
+  if(distanta>10)
+  {
+    PORTD=B11110100;
+    PORTB=B00000011;
+  }
+  if(distanta>11)
+  {
+    PORTD=B11110100;
+    PORTB=B00000111;
+  }
+  if(distanta>12)
+  {
+    PORTD=B11110100;
+    PORTB=B00001111;
+  }
+}

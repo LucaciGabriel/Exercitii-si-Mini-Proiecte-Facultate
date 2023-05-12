@@ -1,0 +1,28 @@
+byte button, lastbutton = 1;
+void setup()
+{  
+ DDRD = DDRD | B11110000;
+}
+void loop()
+{
+ button = (PIND & B00001100) >> 2;
+ if(lastbutton != button)
+ {
+   lastbutton = button;
+   switch(button)
+   {
+     case 0:
+      PORTD = B00010000;
+      break;
+     case 1:
+      PORTD = B00100000;
+      break;
+     case 2:
+      PORTD = B01000000;
+      break;
+     case 3:
+      PORTD = B10000000;
+      break;
+   }
+ }  
+}
