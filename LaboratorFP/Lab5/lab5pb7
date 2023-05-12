@@ -1,0 +1,16 @@
+
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    int n,m,i;
+    scanf("%d",&n);
+    scanf("%d",&m);
+    for(i=10000;i<=99999;i++)
+    {
+        if((i%n)==0 && (i%m)==0) printf("%d este divizibil cu %d si %d\n",i,n,m);
+    }
+    return 0;
+    
+}

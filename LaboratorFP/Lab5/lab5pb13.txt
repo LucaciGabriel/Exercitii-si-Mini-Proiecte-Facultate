@@ -1,0 +1,26 @@
+
+#include <stdio.h>
+#include <math.h>
+#include <time.h>
+int main()
+{
+    srand(time(NULL));
+    int n,i=1,cont=0,d,ok,rez;
+    n=rand()%(20-10+1)+10;
+    printf("n=%d\n",n);
+    while(cont<=n)
+    {
+        d=2;
+        ok=1;
+        while(ok==1 && d<=(i/2))
+        {
+            if(i%d==0)ok=0;
+            else d++;
+        }
+        if(ok==1 && cont==n)rez=i;
+        if(ok==1)cont++;
+        i++;
+    }
+    printf("%d",rez);
+    return 0;
+}

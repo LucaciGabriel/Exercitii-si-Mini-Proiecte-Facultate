@@ -1,0 +1,22 @@
+
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    int x,a,b;
+    scanf("%d",&a);
+    scanf("%d",&b);
+    printf("Alegeti optiune\n 1. Suma\n 2. Produsul\n 3. Catul(a/b)\n 4. Restul(a mod b)\n 5. Iesire\n");
+    scanf("%d",&x);
+    switch(x)
+    {
+        case 1:printf("Suma este %d",a+b);break;
+        case 2:printf("Produsul este %d",a*b);break;
+        case 3:printf("Catul este %d",a/b);break;
+        case 4:printf("Restul este %d",a%b);break;
+        case 5:return 0;break;
+    }
+    if(x!=1 && x!=2 && x!=3 && x!=4 && x!=5) printf("Optiune invalida");
+    return 0;
+}

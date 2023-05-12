@@ -1,0 +1,22 @@
+
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+    unsigned x,b;
+    unsigned masca=1<<2;
+    scanf("%d", &x);
+    if((x&masca)!=0)
+    {
+        masca=1<<5;
+        b=x|masca;
+        printf("%d", b);
+    }
+    else 
+    {
+        masca=~0-(1<<7);
+        b=x&masca;
+        printf("%d", b);
+    }
+    return 0;
+}

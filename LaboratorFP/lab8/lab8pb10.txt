@@ -1,0 +1,24 @@
+
+#include <stdio.h>
+#include <math.h>
+#include <conio.h>
+#include <unistd.h>
+int main()
+{
+    short i,aux,masca;
+    while(!kbhit())
+    {
+        for(i=7;i>=0;i--)
+        {
+            aux=1<<i;
+            masca=1<<i;
+            if((aux&masca)!=0)
+            {
+                printf("1");
+            }else printf("0");
+        }
+        sleep(100);
+        system("cls");
+    }
+    return 0;
+}

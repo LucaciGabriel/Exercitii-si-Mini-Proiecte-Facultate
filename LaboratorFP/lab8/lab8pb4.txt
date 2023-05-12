@@ -1,0 +1,18 @@
+
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+    int m;
+    unsigned long n,b;
+    unsigned masca;
+    scanf("%d", &m);
+    scanf("%ld", &n);
+    masca=1<<m;
+    b=n|masca;
+    printf("%ld", b);
+    masca=~0-(1<<(31-m));
+    b=n&masca;
+    printf("\n%ld", b);
+    return 0;
+}

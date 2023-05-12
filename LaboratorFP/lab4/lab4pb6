@@ -1,0 +1,15 @@
+
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    int y;
+    double x;
+    scanf("%lf",&x);
+    y=x*100000000;
+    y=(y/100)%10000;
+    x=(float)y/10000;
+    printf("%.4f",x);
+    return 0;
+}

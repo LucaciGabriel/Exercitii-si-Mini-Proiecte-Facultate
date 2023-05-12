@@ -1,0 +1,26 @@
+
+#include <stdio.h>
+#include <math.h>
+#include <time.h>
+int main()
+{
+    int x,a,i=1,aux=0;
+    scanf("%d",&x);
+    a=x;
+    printf("%d in binar este=",a);
+    while(i<=8)
+    {
+        aux=aux*10+a%2;
+        a=a/2;
+        i++;
+    }
+    a=aux;
+    aux=0;
+    while(a>0)
+    {
+        aux=aux*10+a%10;
+        a=a/10;
+    }
+    printf("%d",aux);
+    return 0;
+}

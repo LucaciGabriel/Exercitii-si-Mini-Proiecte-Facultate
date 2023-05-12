@@ -1,0 +1,25 @@
+
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+    int n,m,i,j,maxim=-9999,imax,jmax;
+    scanf("%d",&n);
+    scanf("%d",&m);
+    int v[n][m];
+    for(i=1;i<=n;i++)
+    {
+        for(j=1;j<=m;j++)
+        {
+            scanf("%d",&v[i][j]);
+            if(v[i][j]>maxim)
+            {
+                maxim=v[i][j];
+                imax=i;
+                jmax=j;
+            }
+        }
+    }
+    printf("\nMaximul este %d pe linia %d si coloana %d",maxim,imax,jmax);
+    return 0;
+}

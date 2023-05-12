@@ -1,0 +1,14 @@
+
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    int x,x1,x2;
+    scanf("%d",&x);
+    x1=x/1000;
+    x2=x%100;
+    x=x1*100+x2;
+    printf("%d",x);
+    return 0;
+}

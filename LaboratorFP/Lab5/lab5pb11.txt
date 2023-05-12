@@ -1,0 +1,18 @@
+
+#include <stdio.h>
+#include <math.h>
+#include <time.h>
+int main()
+{
+    srand(time(NULL));
+    int nr,suma=0;
+    nr=rand()%(100000-0+1)+0;
+    printf("%d",nr);
+    while(nr>0)
+    {
+        suma=suma+nr%10;
+        nr=nr/10;
+    }
+    printf("\n%d",suma);
+    return 0;
+}

@@ -1,0 +1,37 @@
+
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+    int n,m,i,j;
+    scanf("%d",&n);
+    scanf("%d",&m);
+    int v[n][m],maxim[n],minim[m];
+    for(i=1;i<=n;i++)
+    {
+        for(j=1;j<=m;j++)
+        {
+            scanf("%d",&v[i][j]);
+            minim[j]=10000;
+        }
+        maxim[i]=-9999;
+    }
+    for(i=1;i<=n;i++)
+    {
+        for(j=1;j<=m;j++)
+        {
+            if(v[i][j]>maxim[i])maxim[i]=v[i][j];
+            if(v[i][j]<minim[j])minim[j]=v[i][j];
+        }
+    }
+    for(i=1;i<=n;i++)
+    {
+        printf("%d ",maxim[i]);
+    }
+    printf("\n");
+    for(j=1;j<=m;j++)
+    {
+        printf("%d ",minim[j]);
+    }
+    return 0;
+}

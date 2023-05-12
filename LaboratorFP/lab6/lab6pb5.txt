@@ -1,0 +1,51 @@
+
+#include <stdio.h>
+#include <math.h>
+#include <time.h>
+int main ()
+{
+    int n,m,i,j,aux,max,cont=1,ok;
+    scanf("%d",&n);
+    scanf("%d",&m);
+    if(n>m)max=n;
+    else max=m;
+    int x[n],y[m],inter[max],reun[n+m];
+    printf("Citim prima multime\n");
+    for(i=1;i<=n;i++)
+    {
+        scanf("%d",&x[i]);
+    }
+    printf("Citim a doua multime\n");
+    for(j=1;j<=m;j++)
+    {
+        scanf("%d",&y[j]);
+    }
+    for(i=1;i<=n;i++)
+    {
+        for(j=1;j<=m;j++)
+        {
+            if(x[i]==y[j]){inter[cont]=x[i];cont++;}
+        }
+    }
+    printf("Intersectia:");
+    for(i=1;i<cont;i++)
+    {
+        printf("%d ",inter[i]);
+    }
+    printf("\n");
+    cont=1;
+    for (i=1; i<=n; i++) {reun[cont]=x[i];cont++;}
+    for (i=1; i<=m; i++)
+    {
+        ok=0;
+        for (j=1; j<=n && ok==0; j++)
+         if (y[i]==x[j]) ok=1;
+        if (ok==0) {reun[cont]=y[j]; printf("%d ",reun[cont]);cont++;}
+    }
+    printf("Reuniunea:");
+    for(i=1;i<cont;i++)
+    {
+        printf("%d ",reun[i]);
+    }
+    return 0;
+}

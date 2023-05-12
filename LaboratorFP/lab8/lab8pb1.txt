@@ -1,0 +1,26 @@
+
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+    unsigned short x,b;
+    unsigned short masca=1<<3;
+    scanf("%d", &x);
+    if((x&masca)!=0)
+    {
+        printf("Bitul este 1");
+    }else printf("Bitul este 0");
+    masca=1;
+    printf("\n");
+    if((x&masca)!=0)
+    {
+        printf("Bitul de paritate este 1");
+    }else printf("Bitul de paritate este 0");
+    masca=~0-(1<<2);
+    b=x&masca;
+    printf("\n Numarul rezultat dupa resetarea bitului 2=%d", b);
+    masca=1<<4;
+    b=x|masca;
+    printf("\n Numarul rezultat dupa setarea bitului 4=%d",b);
+    return 0;
+}

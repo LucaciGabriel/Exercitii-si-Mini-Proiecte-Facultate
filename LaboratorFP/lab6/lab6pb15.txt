@@ -1,0 +1,44 @@
+
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+    int n,m,i,j,l,c,cont=1;
+    scanf("%d",&n);
+    scanf("%d",&m);
+    scanf("%d",&l);
+    scanf("%d",&c);
+    int v[n][m],aux[100];
+    for(i=1;i<=n;i++)
+    {
+        for(j=1;j<=m;j++)
+        {
+            scanf("%d",&v[i][j]);
+        }
+    }
+    for(i=1;i<=n;i++)
+    {
+        for(j=1;j<=m;j++)
+        {
+            if(i!=l && j!=c){aux[cont]=v[i][j];cont++;} 
+        }
+    }
+    cont=1;
+    for(i=1;i<=n-1;i++)
+    {
+        for(j=1;j<=m-1;j++)
+        {
+            v[i][j]=aux[cont];
+            cont++;
+        }
+    }
+    for(i=1;i<=n-1;i++)
+    {
+        for(j=1;j<=m-1;j++)
+        {
+            printf("%d ",v[i][j]);
+        }
+        printf("\n");
+    }
+    return 0;
+}

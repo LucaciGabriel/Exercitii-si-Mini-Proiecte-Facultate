@@ -1,0 +1,11 @@
+
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+    unsigned short a,d;
+    scanf("%hi", &a);
+    d=(a<<8|a>>8);
+    printf("%hi",d);
+    return 0;
+}

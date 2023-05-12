@@ -1,0 +1,17 @@
+
+#include <stdio.h>
+
+int main()
+{
+    char x;
+    scanf("%c",&x);
+    if((int)x>=48 && (int)x<=57)
+    {
+        printf("Caracterul %c este numeric",x);
+    }
+    else if(x=='+' || x=='-' || x=='*' || x=='/' || x=='%')
+        {
+            printf("Caracterul %c este un operator matematic",x);        
+        }
+    return 0;
+}

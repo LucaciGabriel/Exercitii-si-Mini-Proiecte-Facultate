@@ -1,0 +1,70 @@
+#include <stdio.h>
+
+int main()
+{
+    int a,b,c,d;
+    printf("a=");
+    scanf("%d",&a);
+    printf("b=");
+    scanf("%d",&b);
+    c=a;d=b;
+    printf("%d",--a);// a
+    a=c;b=d;
+    printf(" --a\n");
+    printf("%d",a--);
+    a=c;b=d;
+    printf(" a--\n");
+    printf("%d",--b);
+    a=c;b=d;
+    printf(" --b\n");
+    printf("%d",b--);
+    a=c;b=d;
+    printf(" b--\n");
+    printf("%d",++a);
+    a=c;b=d;
+    printf(" ++a\n");
+    printf("%d",a++);
+    a=c;b=d;
+    printf(" a++\n");
+    printf("%d",++b);
+    a=c;b=d;
+    printf(" ++b\n");
+    printf("%d",b++);
+    a=c;b=d;
+    printf(" b++\n");
+    
+    printf("%d",a+10);// b cu a
+    printf(" a+10\n");
+    printf("%d",a-10);
+    printf(" a-10\n");
+    printf("%d",a*10);
+    printf(" a*10\n");
+    printf("%d",a/10);
+    printf(" a/10\n");
+    
+     printf("%d",b+10);// b cu b
+    printf(" b+10\n");
+    printf("%d",b-10);
+    printf(" b-10\n");
+    printf("%d",b*10);
+    printf(" b*10\n");
+    printf("%d",b/10);
+    printf(" b/10\n");
+    
+    printf("%d",a/b);//c
+    printf(" catul intreg\n");
+    printf("%d",a%b);
+    printf(" restul intreg\n");
+    
+    float x; x=(float)a/(float)b;//d
+    printf("%.3f",x);
+    printf(" impartirea reala precizie 3\n");
+    printf("%.5f",x);
+    printf(" impartirea reala precizie 5\n");
+    printf("%.10f",x);
+    printf(" impartirea reala precizie 10\n");
+    
+    printf("%d",(a*a*a)-(b*b)+(a*b)+10);//e
+    printf(" expresia\n");
+    return 0;
+}

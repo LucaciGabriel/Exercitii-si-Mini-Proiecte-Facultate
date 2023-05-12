@@ -1,0 +1,27 @@
+
+#include <stdio.h>
+#include <math.h>
+#include <time.h>
+int main ()
+{
+    int n,i,k,aux,ok=1;
+    scanf("%d",&n);
+    int x[n+1];
+    for(i=1;i<=n+1;i++)
+    {
+        x[i]=0;
+    }
+    for(i=1;i<=n;i++)
+    {
+        scanf("%d",&x[i]);
+    }
+    for(i=1;i<n/2 && ok;i++)
+    {
+        if(x[i]!=x[n-i+1])ok=0;
+    }
+    if(ok)
+    {
+        printf("sirul este simetric");
+    }else printf("sirul nu este simetric");
+    return 0;
+}

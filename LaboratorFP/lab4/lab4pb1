@@ -1,0 +1,16 @@
+
+#include <stdio.h>
+
+int main()
+{
+    printf("Codul ASCII:%d Caracterul:%c\n",(int)'a','a');
+    printf("Codul ASCII:%d Caracterul:%c\n",(int)'A','A');
+    printf("Codul ASCII:%d Caracterul:%c\n",(int)'z','z');
+    printf("Codul ASCII:%d Caracterul:%c\n",(int)'Z','Z');
+    printf("Codul ASCII:%d Caracterul:%c\n",(int)'0','0');
+    printf("Codul ASCII:%d Caracterul:%c\n",(int)'9','9');
+    printf("Codul ASCII:%d Caracterul:%c\n",(int)'.','.');
+    printf("Codul ASCII:%d Caracterul:%c\n",(int)'-','-');
+    printf("Codul ASCII:%d Caracterul:%c\n",(int)'+','+');
+    return 0;
+}

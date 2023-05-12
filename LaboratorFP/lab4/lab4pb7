@@ -1,0 +1,26 @@
+
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    int x,a,x1,x2,aux;
+    scanf("%d",&a);
+    printf("Alegeti optiune\n 1. Afisare paritate ultima cifra\n 2. Afisare paritate prima cifra\n 3. Afisare suma cifrelor\n 4. Afisare numar dupa inserare 0 la mijloc\n");
+    scanf("%d",&x);
+    switch(x)
+    {
+        case 1:if(((a%10)%2)==0) printf("Ultima cifra este para");
+                else printf("Ultima cifra este impara");
+                break;
+        case 2:if(((a/1000)%2)==0) printf("Prima cifra este para");
+                else printf("Prima cifra este impara");
+                break;
+        case 3:printf("%d",(a%10)+((a/10)%10)+((a/100)%10)+((a/1000)%10));break;
+        case 4:x1=a/100;printf("%d\n",x1);
+               x2=a%100;printf("%d\n",x2);
+               aux=x1*1000+x2;
+               printf("%d",aux);break;
+    }
+    return 0;
+}

@@ -1,0 +1,18 @@
+
+#include <stdio.h>
+#include <math.h>
+#include <time.h>
+int main()
+{
+    srand(time(NULL));
+    int nr,aux=0;
+    nr=rand()%(9999-5000+1)+5000;
+    printf("%d",nr);
+    while(nr>0)
+    {
+        aux=aux*10+nr%10;
+        nr=nr/10;
+    }
+    printf("\n%d",aux);
+    return 0;
+}

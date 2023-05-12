@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    int x,y,z,p,a;
+    printf("x=");
+    scanf("%d",&x);
+    printf("y=");
+    scanf("%d",&y);
+    printf("z=");
+    scanf("%d",&z);
+    printf("%f",sqrtf((x*x)+(y*y)+(z*z)));//a
+    printf(" radical\n");
+    printf("%f",exp( x*log(y*z)));//b
+    printf(" exp\n");
+    a=abs(x-y-z);//c
+    printf("%d",a);
+    printf(" modul\n");
+    p=pow((double)x+y+z,2);//d
+    printf("%d",p);
+    printf(" (x+y+z)^2\n");
+    printf("%d",x%y);//e
+    printf(" restul x/y\n");
+    printf("%d",x/z);//f
+    printf(" catul x/z");
+    return 0;
+}

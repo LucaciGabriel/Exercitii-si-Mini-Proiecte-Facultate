@@ -1,0 +1,23 @@
+
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+    int n,i,j;
+    scanf("%d",&n);
+    int v[n],frecv[1000];
+    for(i=1;i<=n;i++)
+    {
+        scanf("%d",&v[i]);
+        frecv[v[i]]=0;
+    }
+    for(i=1;i<=n;i++)
+    {
+        frecv[v[i]]++;
+    }
+    for(i=1;i<=n;i++)
+    {
+        printf("%d ",frecv[v[i]]);
+    }
+    return 0;
+}

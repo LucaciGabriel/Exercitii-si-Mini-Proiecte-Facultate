@@ -1,0 +1,47 @@
+#include <stdio.h>
+
+int
+main ()
+{
+  printf ("char in bytes ");
+  printf ("%d", sizeof (char));
+  printf (" char in biti ");
+  printf ("%d", sizeof (char) * 8);
+  printf ("\nunsigned char in bytes ");
+  printf ("%d", sizeof (unsigned char));
+  printf (" unsigned char in biti ");
+  printf ("%d", sizeof (unsigned char) * 8);
+  printf ("\nshort int in bytes ");
+  printf ("%d", sizeof (short int));
+  printf (" short int in biti ");
+  printf ("%d", sizeof (short int) * 8);
+  printf ("\nint in bytes ");
+  printf ("%d", sizeof (int));
+  printf (" int in biti ");
+  printf ("%d", sizeof (int) * 8);
+  printf ("\nunsigned int in bytes ");
+  printf ("%d", sizeof (unsigned int));
+  printf (" unsigned in biti ");
+  printf ("%d", sizeof (unsigned int) * 8);
+  printf ("\nsigned int in bytes ");
+  printf ("%d", sizeof (signed int));
+  printf (" signed int in biti ");
+  printf ("%d", sizeof (signed int) * 8);
+  printf ("\nlong int in bytes ");
+  printf ("%d", sizeof (long int));
+  printf (" long int in biti ");
+  printf ("%d", sizeof (long int) * 8);
+  printf ("\nfloat in bytes ");
+  printf ("%d", sizeof (float));
+  printf (" float in biti ");
+  printf ("%d", sizeof (float) * 8);
+  printf ("\ndouble in bytes ");
+  printf ("%d", sizeof (double));
+  printf (" double in biti ");
+  printf ("%d", sizeof (double) * 8);
+  printf ("\nlong double in bytes ");
+  printf ("%d", sizeof (long double));
+  printf (" long double in biti ");
+  printf ("%d", sizeof (long double) * 8);
+  return 0;
+}

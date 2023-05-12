@@ -1,0 +1,59 @@
+
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+    int n1,n2,i,dif,maxim;
+    scanf("%d",&n1);
+    scanf("%d",&n2);
+    if(n1>=n2)
+    {
+        maxim=n1;
+        dif=n1-n2;
+    }else if(n2>n1){maxim=n2;dif=n2-n1;}
+    int v1[n1],v2[n2],suma[maxim],prod[maxim];
+    for(i=1;i<=n1;i++)
+    {
+        scanf("%d",&v1[i]);
+    }
+    for(i=1;i<=n2;i++)
+    {
+        scanf("%d",&v2[i]);
+    }
+    if(maxim==n1)
+    {
+        for(i=1;i<=n1;i++)
+        {
+            suma[i]=v1[i];
+            prod[i]=v1[i];
+        }
+        for(i=n1;i>=1+dif;i--)
+        {
+            suma[i]=suma[i]+v2[i-dif];
+            prod[i]=prod[i]*v2[i-dif];
+        }
+    }
+    else if(maxim==n2)
+    {
+        for(i=1;i<=n2;i++)
+        {
+            suma[i]=v2[i];
+            prod[i]=v2[i];
+        }
+        for(i=n2;i>=1+dif;i--)
+        {
+            suma[i]=suma[i]+v1[i-dif];
+            prod[i]=prod[i]*v1[i-dif];
+        }
+    }
+    for(i=1;i<=maxim;i++)
+    {
+        printf("%d ",suma[i]);
+    }
+    printf("\n");
+    for(i=1;i<=maxim;i++)
+    {
+        printf("%d ",prod[i]);
+    }
+    return 0;
+}

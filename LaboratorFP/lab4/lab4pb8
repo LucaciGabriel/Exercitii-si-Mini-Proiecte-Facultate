@@ -1,0 +1,16 @@
+
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    int x;
+    scanf("%d",&x);
+    if(x%2==0) printf("Numarul %d este par\n",x);
+    else printf("Numarul %d este impar\n",x);
+    if(x%4==0) printf("Numarul %d este divizibil cu 4\n",x);
+    else printf("Numarul %d nu este divizibil cu 4\n",x);
+    if(x%5==0) printf("Numarul %d este multiplu de 5\n",x);
+    else printf("Numarul %d nu este multiplu de 5\n",x);
+    return 0;
+}

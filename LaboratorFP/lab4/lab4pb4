@@ -1,0 +1,31 @@
+
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    int x,a,b,c,maxim,minim,x1,x2,delta;
+    scanf("%d",&a);
+    scanf("%d",&b);
+    scanf("%d",&c);
+    printf("Alegeti optiune\n 1. Afisare maxim\n 2. Afisare minim\n 3. Afisare suma\n 4. Afisare produs\n 5. Afisare solutii ec. de gradul 2\n");
+    scanf("%d",&x);
+    switch(x)
+    {
+        case 1:if(a>b && a>c) maxim=a;
+                    else if(b>a && b>c) maxim=b;
+                        else if(c>a && c>b) maxim=c;
+                        printf("Maximul este %d",maxim);break;
+        case 2:if(a<b && a<c) minim=a;
+                    else if(b<a && b<c) minim=b;
+                        else if(c<a && c<b) minim=c;
+                        printf("Minimul este %d",minim);break;
+        case 3:printf("Suma este %d",a+b+c);break;
+        case 4:printf("Produsul este %d",a*b*c);break;
+        case 5:delta=(b*b)-(4*a*c);
+                 x1=(-b+sqrt(delta))/2;
+                 x2=(-b-sqrt(delta))/2;
+                 printf("Solutiile ecuatiei de gradul 2 sunt x1:%d si x2:%d",x1,x2);break;
+    }
+    return 0;
+}
